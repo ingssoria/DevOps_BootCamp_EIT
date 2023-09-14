@@ -14,7 +14,14 @@ output "vpc_subnet_1b_id" {
   value = module.vpc.public_subnets[1]
 }
 
-output "security_group_id" {
-  value = aws_security_group.ubuntu-sg-ssh.id
-# value = module.security-group.security_group_id  
+output "public_subnets" {
+  value = var.public_subnets
+}
+
+output "security_group_ids" {
+  value = [aws_security_group.ubuntu-admin-sg-ssh.id, aws_security_group.apache-access-sg-http.id]
+}
+
+output "my_ip_cidr" {
+  value = var.my_ip_cidr
 }

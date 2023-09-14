@@ -4,7 +4,7 @@ variable "vm_name" {
 
 variable "ami" {
     type = string
-    default = "ami-053b0d53c279acc90"  // aws_linux  
+    default = "ami-053b0d53c279acc90" // ubuntu  
 }
 
 variable "instance_type" {
@@ -25,6 +25,11 @@ variable "vpc_id" {
   type = string
 }
 
-variable "security_group_id" {
+variable "security_group_ids" {
+  type = list(string)
+}
+
+variable "region" {
   type = string
+  default = "us-east-1"
 }

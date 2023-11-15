@@ -1,5 +1,5 @@
 variable "PROJECT_ID" {
-  type = string
+  type = string  
 }
 
 variable "REGION" {

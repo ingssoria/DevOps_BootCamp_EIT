@@ -1,0 +1,19 @@
+swagger: '2.0'
+info:
+  title: ${api_title}
+  description: ${api_description}
+  version: 1.0.0
+
+host: "${api_host}"
+basePath: /
+schemes:
+  - https
+
+paths:
+  /main:
+    get:
+      summary: TP_8 Main Endpoint
+      operationId: OperationId
+      responses:
+        '200':
+          description: Successful response

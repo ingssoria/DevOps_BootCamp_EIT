@@ -4,11 +4,12 @@ on:
   push:
     branches: [ "main" ]
     paths: 
-      - "DevOps_BootCamp_EIT/tree/TP_9/**"
+      - "DevOps_BootCamp_EIT/TP_9/**"
+      - "DevOps_BootCamp_EIT/.github/workflows/TP-9-docker-image.yml"
   pull_request:
     branches: [ "main" ]
     paths: 
-      - "DevOps_BootCamp_EIT/tree/TP_9/**"
+      - "DevOps_BootCamp_EIT/TP_9/**"
 
 jobs:
   build-and-push:

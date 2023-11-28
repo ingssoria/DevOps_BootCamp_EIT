@@ -1,3 +1,9 @@
+## Descripción del desafío
+
+En este desafio vamos a trabajar sobre algunas herramientas vistas en clase y que ya estuvimos practicando, este desafio cuenta con dos partes:
+1. Esta orientada a construir una imagen de docker y publicarla en docker hub
+2. Desplegar esta imagen en su cluster de minikube.
+
 
 ## Docker Pull Command:
 

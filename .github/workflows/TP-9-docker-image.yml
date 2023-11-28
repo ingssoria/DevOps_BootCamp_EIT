@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
     paths: 
       - "TP_9/**"
-      - ".github/**"
+      # - ".github/**"
   pull_request:
     branches: [ "main" ]
     paths: 

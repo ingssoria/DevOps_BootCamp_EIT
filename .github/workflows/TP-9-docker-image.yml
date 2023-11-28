@@ -4,12 +4,12 @@ on:
   push:
     branches: [ "main" ]
     paths: 
-      - "DevOps_BootCamp_EIT/TP_9/**"
-      - "DevOps_BootCamp_EIT/.github/workflows/TP-9-docker-image.yml"
+      - "TP_9/**"
+      - ".github/**"
   pull_request:
     branches: [ "main" ]
     paths: 
-      - "DevOps_BootCamp_EIT/TP_9/**"
+      - "TP_9/**"
 
 jobs:
   build-and-push:
@@ -34,8 +34,8 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v5.1.0
       with:
-        context: ${{ github.workspace }}/DevOps_BootCamp_EIT/TP_9/
-        file: ${{ github.workspace }}/DevOps_BootCamp_EIT/TP_9/Dockerfile
+        context: ${{ github.workspace }}/TP_9/
+        file: ${{ github.workspace }}/TP_9/Dockerfile
         no-cache: true
         push: false
         tags: ingssoria/tp-9-image:${{ steps.date.outputs.date }}-${{ github.run_number }}

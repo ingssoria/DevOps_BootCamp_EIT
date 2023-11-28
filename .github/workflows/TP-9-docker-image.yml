@@ -37,5 +37,5 @@ jobs:
         context: ${{ github.workspace }}/TP_9/
         file: ${{ github.workspace }}/TP_9/Dockerfile
         no-cache: true
-        push: false
+        push: true
         tags: ingssoria/tp-9-image:${{ steps.date.outputs.date }}-${{ github.run_number }}

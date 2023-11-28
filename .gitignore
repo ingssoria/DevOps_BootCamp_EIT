@@ -1,0 +1,10 @@
+*.backup
+*.out
+*.tfstate
+*.hcl
+*.lock
+.terraform
+*.txt
+*.png
+*.jpeg
+*.jpg

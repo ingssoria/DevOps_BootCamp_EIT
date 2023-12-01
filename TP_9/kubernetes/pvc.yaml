@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: tp9-pvc
+  namespace: tp9-ns
+  labels:
+    app: tp9
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi  # Asegúrate de cambiar esto según tus necesidades

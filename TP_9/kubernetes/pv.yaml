@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: tp9-pv
+  namespace: tp9-ns
+  labels:
+    app: tp9
+spec:
+  capacity:
+    storage: 10Gi  # Asegúrate de cambiar esto según tus necesidades
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /data/tp9-volume/

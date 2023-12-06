@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
     paths: 
       - "TP_10/**"
-      - ".github/TP-10-chart.yaml"
+      - ".github/workflows/TP-10-chart.yaml"
 
 jobs:
 

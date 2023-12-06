@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: ingssoria/tp10
+  repository: ingssoria/tp-9-image
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"

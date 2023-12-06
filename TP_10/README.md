@@ -13,26 +13,43 @@ Entregable:
 1 - Configuracion en GitHub de las Pages
 * Generar un Token Classic en la configuracion de la cuenta
 * Crear el secret TOKEN para las actions del repositorio asignandole como valor el token antes generado
-* Crear una rama 
+* Crear la rama gh-pages
 ```bach
 git branch gh-pages 
 git push --set-upstream origin gh-pages
 ```
 * Crear y configurar las Actions
 * Generar page en la configuarion del repositorio
+* Ejecutar las Actions que generan el release y el index.yaml en la branch gh-pages
 
-Instalación de Helm:
+2 - Instalación y configuración de Helm:
 * Con chocolatey (abrir powershell como admin) ejecutar
 ```bach
 choco install kubernetes-helm -y --params "/Global"
 ``` 
-* Configurar el repositorio
+* Configurar el repositorio del proyecto
 ```bach
-helm repo add github https://ingssoria.github.io/TP_10/
-``` 
+    helm repo add github_TP10 https://ingssoria.github.io/DevOps_BootCamp_EIT/
+    helm repo list
+```
 
-2 - Instalación de ArgoCD en Minikube
+3 - Instalacion del Chart
+```bach
+    helm install <nombre_del_release> <nombre_repositorio>/<nombre_del_chart>
+	helm install tp10 github_TP10/tp10-chart
+	helm upgrade tp10 github_TP10/tp10-chart -f values-prod.yaml
+```
+
+4 - Iniciar Minikube:
+* Soportado en Docker (abrir powershell como admin) ejecutar	
+```bach
+    minikube start --vm-driver=docker
+    minikube dashboard
+```
+
+5 - Instalación de ArgoCD en Minikube
 * Con chocolatey (abrir powershell como admin) ejecutar
 ```bach
 choco install kubernetes-helm -y --params "/Global"
 ```  
+

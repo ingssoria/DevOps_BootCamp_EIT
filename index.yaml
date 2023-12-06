@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  tp10-chart:
+  - apiVersion: v2
+    appVersion: v1.0.3
+    created: "2023-12-06T19:15:10.933786254Z"
+    description: Este es el template para T10-chart
+    digest: 34363224397bececd348fe239a0c0935f41baf73f0e03247f318160beaa82bf9
+    name: tp10-chart
+    type: application
+    urls:
+    - https://github.com/ingssoria/DevOps_BootCamp_EIT/releases/download/tp10-chart-1.1.0/tp10-chart-1.1.0.tgz
+    version: 1.1.0
+generated: "2023-12-06T19:15:10.933795354Z"

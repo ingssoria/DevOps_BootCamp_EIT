@@ -10,7 +10,17 @@ Entregable:
 
 
 #### Tareas desarrolladas para la resolución del Desafío
-1 - Instalación de Helm:
+1 - Configuracion en GitHub de las Pages
+* Generar un Token Classic en la configuracion de la cuenta
+* Crear el secret TOKEN para las actions del repositorio asignandole como valor el token antes generado
+* Crear una rama 
+```bach
+git branch gh-pages 
+```
+* Crear y configurar las Actions
+* Generar page en la configuarion del repositorio
+
+Instalación de Helm:
 * Con chocolatey (abrir powershell como admin) ejecutar
 ```bach
 choco install kubernetes-helm -y --params "/Global"

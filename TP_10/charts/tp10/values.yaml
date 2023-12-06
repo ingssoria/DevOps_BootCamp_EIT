@@ -8,7 +8,7 @@ image:
   repository: ingssoria/tp-9-image
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "2023-12-01-9"
 
 imagePullSecrets: []
 nameOverride: ""

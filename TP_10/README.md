@@ -16,6 +16,7 @@ Entregable:
 * Crear una rama 
 ```bach
 git branch gh-pages 
+git push --set-upstream origin gh-pages
 ```
 * Crear y configurar las Actions
 * Generar page en la configuarion del repositorio

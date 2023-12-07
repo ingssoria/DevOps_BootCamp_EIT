@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tp9-deployment
+  namespace: tp9-ns
+  labels:
+    app: tp9
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      app: tp9
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}    
+      labels:
+        app: tp9
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}          
+      containers:
+      - name: tp9
+        securityContext:
+          {{- toYaml .Values.securityContext | nindent 12 }}      
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"        
+        ports:
+        - containerPort: {{ .Values.service.port | 3000 }}
+        volumeMounts:
+        - name: tp9-volume
+          mountPath: /usr/src/app/db
+        livenessProbe:
+          httpGet:
+            path: /
+            port: http
+        readinessProbe:
+          httpGet:
+            path: /
+            port: http          
+      volumes:
+      - name: tp9-volume
+        persistentVolumeClaim:
+          claimName: tp9-pvc

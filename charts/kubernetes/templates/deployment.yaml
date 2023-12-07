@@ -33,7 +33,7 @@ spec:
           {{- toYaml .Values.securityContext | nindent 12 }}      
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"        
         ports:
-        - containerPort: {{ .Values.service.port | 3000 }}
+        - containerPort: {{ .Values.service.port }}
         volumeMounts:
         - name: tp9-volume
           mountPath: /usr/src/app/db

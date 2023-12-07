@@ -38,7 +38,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 80
+  port: 8080
   targetPort: 80
 
 ingress:
@@ -80,10 +80,6 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
-secretMessage:
-  create: true
-  message: "Helm chart para TP10"
 
 PersistentVolume:
   enabled: true

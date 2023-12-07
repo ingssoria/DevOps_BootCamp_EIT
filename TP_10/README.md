@@ -33,18 +33,19 @@ choco install kubernetes-helm -y --params "/Global"
     helm repo list
 ```
 
-3 - Instalacion del Chart
+3 - Iniciar Minikube:
+* Ejecutar DockerDesktop
+* Iniciar el kluster soportado en Docker (abrir powershell como admin) ejecutar	
+```bach
+    minikube start --vm-driver=docker
+    minikube dashboard
+```
+
+4 - Instalacion del Chart:
 ```bach
     helm install <nombre_del_release> <nombre_repositorio>/<nombre_del_chart>
 	helm install tp10 github_TP10/tp10-chart
 	helm upgrade tp10 github_TP10/tp10-chart -f values-prod.yaml
-```
-
-4 - Iniciar Minikube:
-* Soportado en Docker (abrir powershell como admin) ejecutar	
-```bach
-    minikube start --vm-driver=docker
-    minikube dashboard
 ```
 
 5 - Instalación de ArgoCD en Minikube

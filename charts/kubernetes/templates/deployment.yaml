@@ -12,10 +12,6 @@ spec:
       app: tp9
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
-      annotations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}    
       labels:
         app: tp9
     spec:       

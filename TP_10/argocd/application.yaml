@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tp10-app
+  namespace: argo-cd
+spec:
+  destination:
+    namespace: argo-cd-tp10-app
+    server: "https://kubernetes.default.svc"
+  source:
+    repoURL: 'https://ingssoria.github.io/DevOps_BootCamp_EIT'
+    targetRevision: 1.0.9
+    chart: tp10-kubernets-chart
+    helm:
+      releaseName: tp10    
+  project: default
+  syncPolicy:
+    automated: null
+      # prune: true # permite eliminar recursos que no estan en el repo.
+      # selfHeal: true # permite pisar cambios manuales y mantiene sincronizado desde el repo.
+    syncOptions:
+    - CreateNamespace=true # permite forzar la creacion de NS.      
+
+
+

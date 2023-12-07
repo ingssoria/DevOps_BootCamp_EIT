@@ -54,6 +54,16 @@ entries:
   tp10-kubernets-chart:
   - apiVersion: v2
     appVersion: v1.0.3
+    created: "2023-12-07T16:36:14.180254798Z"
+    description: Este es el template para T10-chart
+    digest: d26f349a1df8ab054f90aa562e325f6be254a1a5de77c116f50a400c43bc3619
+    name: tp10-kubernets-chart
+    type: application
+    urls:
+    - https://github.com/ingssoria/DevOps_BootCamp_EIT/releases/download/tp10-kubernets-chart-1.0.7/tp10-kubernets-chart-1.0.7.tgz
+    version: 1.0.7
+  - apiVersion: v2
+    appVersion: v1.0.3
     created: "2023-12-07T15:59:25.148309725Z"
     description: Este es el template para T10-chart
     digest: 660141c412ad94fab073b7b5801d84348aaa1f6b1fcf78c2ea2d6c42a1c5498c
@@ -112,4 +122,4 @@ entries:
     urls:
     - https://github.com/ingssoria/DevOps_BootCamp_EIT/releases/download/tp10-kubernets-chart-1.0.1/tp10-kubernets-chart-1.0.1.tgz
     version: 1.0.1
-generated: "2023-12-07T15:59:25.148345442Z"
+generated: "2023-12-07T16:36:14.180288832Z"

@@ -10,9 +10,9 @@ Entregable:
 
 
 #### Tareas desarrolladas para la resolución del Desafío
-1 - Configuracion en GitHub de las Pages
+1 - Configuración en GitHub de las Pages
 * Generar un Token Classic en la configuración de la cuenta.
-* Crear el secret TOKEN para las actions del repositorio asignandole como valor el token antes generado.
+* Crear el secret TOKEN para las actions del repositorio asignándole como valor el token antes generado.
 * Crear la rama gh-pages:
 ```bash
 git branch gh-pages 

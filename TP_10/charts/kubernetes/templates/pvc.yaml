@@ -1,0 +1,15 @@
+{{- if .Values.PersistentVolumeClaim.enabled -}}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: tp9-pvc
+  namespace: tp9-ns
+  labels:
+    app: tp9
+spec:
+  accessModes:
+    - {{ .Values.PersistentVolumeClaim.accessMode }} # ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.PersistentVolumeClaim.size }}
+{{- end}}

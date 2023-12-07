@@ -1,0 +1,17 @@
+{{- if .Values.PersistentVolume.enabled -}}
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: tp9-pv
+  namespace: tp9-ns
+  labels:
+    app: tp9
+spec:
+  capacity:
+    storage: {{ .Values.PersistentVolume.size}}
+  accessModes:
+    - {{ .Values.PersistentVolume.accessMode}} # ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /data/tp9-volume/
+{{- end}}

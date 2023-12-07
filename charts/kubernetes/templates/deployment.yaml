@@ -5,10 +5,8 @@ metadata:
   namespace: tp9-ns
   labels:
     app: tp9
-spec:
-  {{- if not .Values.autoscaling.enabled }}
-  replicas: {{ .Values.replicaCount }}
-  {{- end }}
+spec:  
+  replicas: {{ .Values.replicaCount }}  
   selector:
     matchLabels:
       app: tp9

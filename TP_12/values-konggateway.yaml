@@ -1,0 +1,27 @@
+image:
+  repository: kong/kong-gateway
+  tag: "3.5.0.1"
+ 
+secretVolumes:
+- kong-cluster-cert
+ 
+admin:
+  enabled: false
+ 
+env:
+  role: data_plane
+  database: "off"
+  cluster_mtls: pki
+  cluster_control_plane: N/A:443
+  cluster_server_name: N/A
+  cluster_telemetry_endpoint: a8793f8451.us.tp0.konghq.com:443
+  cluster_telemetry_server_name: a8793f8451.us.tp0.konghq.com
+  cluster_cert: /etc/secrets/kong-cluster-cert/tls.crt
+  cluster_cert_key: /etc/secrets/kong-cluster-cert/tls.key
+  lua_ssl_trusted_certificate: system
+  konnect_mode: "on"
+  vitals: "off"
+ 
+ingressController:
+  enabled: false
+  installCRDs: false

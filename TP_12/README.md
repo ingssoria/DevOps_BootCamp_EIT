@@ -13,6 +13,12 @@ información:
 * Informe los comandos CURL que se ejecutaron para realizar las pruebas, recuerda que tiene que existir una llamada a la API con autenticación.
 * Diagrama de alto nivel de cómo están desplegados los componentes.
 
+
+#### Integrantes
+* Gustavo Marcos
+* Sindy Soria Francis
+
+
 #### Tareas desarrolladas para la resolución del Desafío
 1 - Instalación de Kong Gateway en Minikube
 
@@ -79,6 +85,7 @@ helm install kong-gateway kong/kong -n kong --values ./values-konggateway.yaml
 * Crear los Consumer
 * Comandos CURL habilitados
 ```bash
+https://gameofthronesquotes/tp12service/v1?key="34nwgh892yfaxmlemswqokxsazx412"
 ```
 
 3 - Diagrama de Despliegue de Copmponentes:
